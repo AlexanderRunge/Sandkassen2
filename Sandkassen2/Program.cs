@@ -2,7 +2,7 @@
 
 bool test = false;
 
-UI.ShowMenu();
+UI.Welcome();
 do
 {
     ConsoleKeyInfo keyInfo = Console.ReadKey();
@@ -15,12 +15,20 @@ do
     {
         UI.ShowSearch();
     }
+    if (keyInfo.Key == ConsoleKey.T)
+    {
+        UI.AddSearchResult();
+    }
+    if (keyInfo.Key == ConsoleKey.R)
+    {
+        UI.RemoveSearchResult();
+    }
     if (keyInfo.Key == ConsoleKey.N)
     {
-        UI.Welcome();
+        UI.ChangeName();
     }
-    if (keyInfo.Key == ConsoleKey.M)
+    if (keyInfo.Key == ConsoleKey.P)
     {
-        UI.ShowMenu();
+        UI.Profile();
     }
 } while (test == false);
