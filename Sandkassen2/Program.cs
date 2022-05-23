@@ -1,10 +1,12 @@
 ﻿using Sandkassen2;
 
+//File.WriteAllText("items.txt", "");
+File.WriteAllText("people.txt", "");
 bool test = false;
 
-UI.Welcome();
 do
 {
+    UI.ShowMenu();
     ConsoleKeyInfo keyInfo = Console.ReadKey();
     if (keyInfo.Key == ConsoleKey.X)
     {
@@ -15,6 +17,10 @@ do
     {
         UI.ShowSearch();
     }
+    if (keyInfo.Key == ConsoleKey.E)
+    {
+        UI.EditSearchResult();
+    }
     if (keyInfo.Key == ConsoleKey.T)
     {
         UI.AddSearchResult();
@@ -23,12 +29,8 @@ do
     {
         UI.RemoveSearchResult();
     }
-    if (keyInfo.Key == ConsoleKey.N)
-    {
-        UI.ChangeName();
-    }
     if (keyInfo.Key == ConsoleKey.P)
     {
-        UI.Profile();
+        UI.People();
     }
 } while (test == false);
