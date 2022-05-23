@@ -25,7 +25,7 @@
             List<string> people = ReadPeopleContens();
             Console.WriteLine(people);
             
-            Console.WriteLine("Indtast fornavn på person: (efterlad blank hvis du vil annulere)" ?? "");
+            Console.WriteLine("Indtast fornavn på person: (efterlad blank hvis du vil anulere)" ?? "");
             string fornavn = Console.ReadLine() ?? "";
             if (fornavn != "")
             {

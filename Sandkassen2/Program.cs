@@ -1,7 +1,7 @@
 ﻿using Sandkassen2;
 
 //File.WriteAllText("items.txt", "");
-File.WriteAllText("people.txt", "");
+//File.WriteAllText("people.txt", "");
 bool test = false;
 
 do
